@@ -65,6 +65,9 @@ DBMS_LAB_EXPERIMENTS/
 │   ├── experiment_10.sql               # Executable MySQL script
 │   └── output/                         # Execution verification screenshots
 │
+├── certificates/                       # Certifications & achievements
+│   └── sql_basic_certificate.pdf       # HackerRank SQL (Basic) Certificate
+│
 └── Puran docx/                         # Original source files & handwritten scans
     ├── DBMS 3 Puran.docx
     ├── DBMS EXPERIMENT 4 Puran.docx
@@ -161,3 +164,9 @@ mysql -u root -p < EXPERIMENT_10/experiment_10.sql
 ## 📌 Source Code Integrity Statement
 
 The primary source code for all lab practicals consists of the executable `.sql` scripts located in the respective experiment folders. All aims, schemas, column names, constraints, and sample data have been strictly reproduced from the original laboratory materials and validated for correctness and idempotency.
+
+---
+
+## 🏅 Certificates
+
+- [SQL (Basic) Certificate](certificates/sql_basic_certificate.pdf)
