@@ -15,6 +15,10 @@ This repository contains fully tested, idempotent SQL scripts, complete schemas,
 | **Experiment 04** | Joins, Subqueries & EXPLAIN Plans | `INNER JOIN`, `LEFT JOIN`, Self-Join, 3-Way Join, Correlated Subqueries, `EXISTS`, Simulated `INTERSECT`/`EXCEPT`, `EXPLAIN` | [experiment_04.sql](EXPERIMENT_04/experiment_04.sql) |
 | **Experiment 05** | Views, Updatability & Recursive CTEs | Aggregate Views, View Updatability Rules, Self-Referential FKs, Common Table Expressions, Recursive CTE | [experiment_05.sql](EXPERIMENT_05/experiment_05.sql) |
 | **Experiment 06** | Stored Procedures & Triggers | Stored Procedures, `SIGNAL SQLSTATE`, `BEFORE UPDATE` Validation Trigger, `AFTER UPDATE` Audit Logging | [experiment_06.sql](EXPERIMENT_06/experiment_06.sql) |
+| **Experiment 07** | Schema Normalization (UNF to BCNF) | 1NF, 2NF, 3NF, BCNF, Lossless Join, Dependency Preservation | [experiment_07.sql](EXPERIMENT_07/experiment_07.sql) |
+| **Experiment 08** | Transactions & Concurrency Isolation | `START TRANSACTION`, `COMMIT`, `ROLLBACK`, `SAVEPOINT`, Isolation Levels, ACID | [experiment_08.sql](EXPERIMENT_08/experiment_08.sql) |
+| **Experiment 09** | Single-Column & Composite Indexing | `CREATE INDEX`, Composite Indexes, Benchmarking, `EXPLAIN` | [experiment_09.sql](EXPERIMENT_09/experiment_09.sql) |
+| **Experiment 10** | Query Optimization & Anti-Patterns | Anti-Patterns vs. Optimized Queries, Execution Plans, `EXPLAIN` | [experiment_10.sql](EXPERIMENT_10/experiment_10.sql) |
 
 ---
 
@@ -45,6 +49,22 @@ DBMS_LAB_EXPERIMENTS/
 │   ├── experiment_06.sql               # Executable MySQL script
 │   └── README.md                       # Documentation & trigger logic
 │
+├── EXPERIMENT_07/                      # Experiment 7: Schema Normalization (UNF to BCNF)
+│   ├── experiment_07.sql               # Executable MySQL script
+│   └── output/                         # Execution verification screenshots
+│
+├── EXPERIMENT_08/                      # Experiment 8: Transactions & Concurrency Isolation
+│   ├── experiment_08.sql               # Executable MySQL script
+│   └── output/                         # Execution verification screenshots
+│
+├── EXPERIMENT_09/                      # Experiment 9: Single-Column & Composite Indexing
+│   ├── experiment_09.sql               # Executable MySQL script
+│   └── output/                         # Execution verification screenshots
+│
+├── EXPERIMENT_10/                      # Experiment 10: Query Optimization & Anti-Patterns
+│   ├── experiment_10.sql               # Executable MySQL script
+│   └── output/                         # Execution verification screenshots
+│
 └── Puran docx/                         # Original source files & handwritten scans
     ├── DBMS 3 Puran.docx
     ├── DBMS EXPERIMENT 4 Puran.docx
@@ -67,7 +87,7 @@ DBMS_LAB_EXPERIMENTS/
 
 ## 🚀 Execution Instructions
 
-Each experiment is self-contained and encapsulated within its own database schema (`CollegeDB`, `CompanyDB_Exp03`, `CompanyDB_Exp04`, `CompanyDB_Exp05`, `CompanyDB_Exp06`). Scripts are completely **rerunnable** and clean up existing tables/views/routines prior to execution.
+Each experiment is self-contained and encapsulated within its own database schema (`CollegeDB`, `CompanyDB_Exp03`, `CompanyDB_Exp04`, `CompanyDB_Exp05`, `CompanyDB_Exp06`, `NormalizationDB`, `BankingDB`, `RailwayDB`, `OptimizationDB`). Scripts are completely **rerunnable** and clean up existing tables/views/routines prior to execution.
 
 ### Method 1: Using MySQL Command-Line Client
 
@@ -88,6 +108,18 @@ mysql -u root -p < EXPERIMENT_05/experiment_05.sql
 
 # Execute Experiment 6
 mysql -u root -p < EXPERIMENT_06/experiment_06.sql
+
+# Execute Experiment 7
+mysql -u root -p < EXPERIMENT_07/experiment_07.sql
+
+# Execute Experiment 8
+mysql -u root -p < EXPERIMENT_08/experiment_08.sql
+
+# Execute Experiment 9
+mysql -u root -p < EXPERIMENT_09/experiment_09.sql
+
+# Execute Experiment 10
+mysql -u root -p < EXPERIMENT_10/experiment_10.sql
 ```
 
 ### Method 2: Using MySQL Workbench
